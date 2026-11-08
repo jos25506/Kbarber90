@@ -771,7 +771,7 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                               FlutterFlowTheme.of(context).titleSmall.fontStyle,
                         ),
                     elevation: 0.0,
-                    borderRadius: BorderRadius.circular(12.0),
+                    borderRadius: BorderRadius.circular(14.0),
                   ),
                 ),
               ),
