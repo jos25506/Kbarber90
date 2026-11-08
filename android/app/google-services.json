@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "300932891227",
+    "project_id": "kbarber90-8wrldb",
+    "storage_bucket": "kbarber90-8wrldb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300932891227:android:adaca589c9e6c871d3757e",
+        "android_client_info": {
+          "package_name": "com.kba.kbarber90"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3WOk3Xc68OmplyJdpDVAptXtFlhilO4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

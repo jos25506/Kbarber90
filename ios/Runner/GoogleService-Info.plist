@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyABsB6L9v5C-jk5CggXL8GIPf_AroKImFs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>300932891227</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kba.kbarber90</string>
+	<key>PROJECT_ID</key>
+	<string>kbarber90-8wrldb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kbarber90-8wrldb.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:300932891227:ios:574036fed97662a6d3757e</string>
+</dict>
+</plist>
