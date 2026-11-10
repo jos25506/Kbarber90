@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -76,14 +77,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? InicioWidget() : IniciarSesionWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : IniciarSesionWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? InicioWidget()
-              : IniciarSesionWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? NavBarPage() : IniciarSesionWidget(),
         ),
         FFRoute(
           name: IniciarSesionWidget.routeName,
@@ -91,14 +91,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => IniciarSesionWidget(),
         ),
         FFRoute(
-          name: InicioWidget.routeName,
-          path: InicioWidget.routePath,
-          builder: (context, params) => InicioWidget(),
+          name: InicioAdminWidget.routeName,
+          path: InicioAdminWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'InicioAdmin')
+              : InicioAdminWidget(),
         ),
         FFRoute(
           name: RegistroWidget.routeName,
           path: RegistroWidget.routePath,
           builder: (context, params) => RegistroWidget(),
+        ),
+        FFRoute(
+          name: ServiciosWidget.routeName,
+          path: ServiciosWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Servicios')
+              : ServiciosWidget(),
+        ),
+        FFRoute(
+          name: ProductosWidget.routeName,
+          path: ProductosWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Productos')
+              : ProductosWidget(),
+        ),
+        FFRoute(
+          name: CitasWidget.routeName,
+          path: CitasWidget.routePath,
+          builder: (context, params) =>
+              params.isEmpty ? NavBarPage(initialPage: 'Citas') : CitasWidget(),
+        ),
+        FFRoute(
+          name: PagosWidget.routeName,
+          path: PagosWidget.routePath,
+          builder: (context, params) =>
+              params.isEmpty ? NavBarPage(initialPage: 'Pagos') : PagosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

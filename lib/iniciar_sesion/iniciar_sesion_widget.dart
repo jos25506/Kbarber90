@@ -456,7 +456,8 @@ class _IniciarSesionWidgetState extends State<IniciarSesionWidget> {
                     return;
                   }
 
-                  context.goNamedAuth(InicioWidget.routeName, context.mounted);
+                  context.goNamedAuth(
+                      InicioAdminWidget.routeName, context.mounted);
                 },
                 text: 'Iniciar sesión',
                 options: FFButtonOptions(

@@ -61,7 +61,6 @@ class _RegistroWidgetState extends State<RegistroWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: (FFCrossAxisAlignment.start).flutterValue,
