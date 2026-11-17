@@ -127,6 +127,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: PagosWidget.routePath,
           builder: (context, params) =>
               params.isEmpty ? NavBarPage(initialPage: 'Pagos') : PagosWidget(),
+        ),
+        FFRoute(
+          name: AccesorestringidoWidget.routeName,
+          path: AccesorestringidoWidget.routePath,
+          builder: (context, params) => AccesorestringidoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

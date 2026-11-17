@@ -6,3 +6,5 @@ export '/servicios/servicios_widget.dart' show ServiciosWidget;
 export '/productos/productos_widget.dart' show ProductosWidget;
 export '/citas/citas_widget.dart' show CitasWidget;
 export '/pagos/pagos_widget.dart' show PagosWidget;
+export '/accesorestringido/accesorestringido_widget.dart'
+    show AccesorestringidoWidget;
