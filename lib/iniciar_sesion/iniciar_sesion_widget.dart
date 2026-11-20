@@ -456,8 +456,14 @@ class _IniciarSesionWidgetState extends State<IniciarSesionWidget> {
                     return;
                   }
 
-                  context.goNamedAuth(
-                      InicioAdminWidget.routeName, context.mounted);
+                  if (valueOrDefault(currentUserDocument?.rol, '') ==
+                      'administrador') {
+                    context.pushNamedAuth(
+                        InicioAdminWidget.routeName, context.mounted);
+                  } else {
+                    context.pushNamedAuth(
+                        ServiciosWidget.routeName, context.mounted);
+                  }
                 },
                 text: 'Iniciar sesión',
                 options: FFButtonOptions(

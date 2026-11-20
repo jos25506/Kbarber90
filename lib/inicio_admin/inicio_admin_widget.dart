@@ -1,8 +1,10 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/ff_builtin_enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'inicio_admin_model.dart';
 export 'inicio_admin_model.dart';
@@ -26,6 +28,13 @@ class _InicioAdminWidgetState extends State<InicioAdminWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => InicioAdminModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (valueOrDefault(currentUserDocument?.rol, '') != 'administrador') {
+        context.pushNamed(AccesorestringidoWidget.routeName);
+      }
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -66,6 +75,20 @@ class _InicioAdminWidgetState extends State<InicioAdminWidget> {
                   crossAxisAlignment: (FFCrossAxisAlignment.start).flutterValue,
                   textBaseline: TextBaseline.alphabetic,
                   children: [
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed(IniciarSesionWidget.routeName);
+                      },
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: FlutterFlowTheme.of(context).alternate,
+                        size: 24.0,
+                      ),
+                    ),
                     Text(
                       'KBARBER90',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(

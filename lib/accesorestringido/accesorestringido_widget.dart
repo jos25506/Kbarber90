@@ -261,7 +261,7 @@ class _AccesorestringidoWidgetState extends State<AccesorestringidoWidget> {
               alignment: AlignmentDirectional(0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
-                  context.pushNamed(InicioAdminWidget.routeName);
+                  context.pushNamed(ServiciosWidget.routeName);
                 },
                 text: 'Volver al inicio',
                 options: FFButtonOptions(

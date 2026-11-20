@@ -742,10 +742,11 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                         .update(createUsersRecordData(
                           email: _model.textFieldEMAILTextController.text,
                           displayName: _model.textController1.text,
+                          rol: 'cliente',
                         ));
 
                     context.pushNamedAuth(
-                        IniciarSesionWidget.routeName, context.mounted);
+                        ServiciosWidget.routeName, context.mounted);
                   },
                   text: 'Crear cuenta',
                   options: FFButtonOptions(

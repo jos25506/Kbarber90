@@ -132,6 +132,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AccesorestringidoWidget.routeName,
           path: AccesorestringidoWidget.routePath,
           builder: (context, params) => AccesorestringidoWidget(),
+        ),
+        FFRoute(
+          name: HistorialWidget.routeName,
+          path: HistorialWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Historial')
+              : HistorialWidget(),
+        ),
+        FFRoute(
+          name: HiWidget.routeName,
+          path: HiWidget.routePath,
+          builder: (context, params) =>
+              params.isEmpty ? NavBarPage(initialPage: 'Hi') : HiWidget(),
+        ),
+        FFRoute(
+          name: Pagina10Widget.routeName,
+          path: Pagina10Widget.routePath,
+          builder: (context, params) => Pagina10Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
