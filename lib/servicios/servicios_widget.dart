@@ -1,4 +1,3 @@
-import '/flutter_flow/ff_builtin_enums.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'servicios_model.dart';
@@ -44,13 +43,6 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF3EEE6),
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: (FFMainAxisAlignment.start).flutterValue,
-          crossAxisAlignment: (FFCrossAxisAlignment.start).flutterValue,
-          textBaseline: TextBaseline.alphabetic,
-          children: [],
-        ),
       ),
     );
   }

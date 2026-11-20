@@ -8,3 +8,6 @@ export '/citas/citas_widget.dart' show CitasWidget;
 export '/pagos/pagos_widget.dart' show PagosWidget;
 export '/accesorestringido/accesorestringido_widget.dart'
     show AccesorestringidoWidget;
+export '/historial/historial_widget.dart' show HistorialWidget;
+export '/hi/hi_widget.dart' show HiWidget;
+export '/pagina10/pagina10_widget.dart' show Pagina10Widget;

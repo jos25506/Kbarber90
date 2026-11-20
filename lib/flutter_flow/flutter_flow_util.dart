@@ -296,7 +296,8 @@ void showSnackbar(
                 ),
               ),
             ),
-          Text(message),
+          // A message longer than one line wraps instead of overflowing.
+          Flexible(child: Text(message)),
         ],
       ),
       duration: Duration(seconds: duration),

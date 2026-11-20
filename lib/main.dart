@@ -147,6 +147,8 @@ class _NavBarPageState extends State<NavBarPage> {
       'Productos': ProductosWidget(),
       'Citas': CitasWidget(),
       'Pagos': PagosWidget(),
+      'Historial': HistorialWidget(),
+      'Hi': HiWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -204,6 +206,22 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Pagos',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.content_cut,
+              size: 24.0,
+            ),
+            label: 'Servicios',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.content_cut,
+              size: 24.0,
+            ),
+            label: 'Servicios',
             tooltip: '',
           )
         ],
